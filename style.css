@@ -1,0 +1,133 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.navButton {
+    text-align: center;
+}
+
+/* ================= HERO STYLES ==================== */
+
+#hero {
+    height: 100vh;
+}
+
+#heroImg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+#readHeader {
+    padding-top: 20vh;
+    color: white;
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Play', sans-serif;
+    display: none;
+    text-shadow: 3px 0 0 rgb(255, 2, 2), -2px 0 0 rgb(255, 2, 2), 0 2px 0 rgb(220, 6, 248), 0 -3px 0 rgb(9, 240, 228), 1px 1px rgb(235, 0, 243), -1px -1px 0 rgb(245, 6, 6), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
+}
+
+#gameTitle {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Play', sans-serif;
+    display: none;
+}
+
+#server {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Play', sans-serif;
+    display: none;
+}
+
+#topHero {
+    height: 94vh;
+}
+
+#rightNavButtonHero {
+    position: absolute;
+    right: 5vw;
+}
+
+#leftNavButtonHero {
+    position: absolute;
+    left: 5vw;
+}
+
+/* ================= ADMIN AND OTHER LEADER INFO ==================== */
+
+#leaderInfo {
+    height: 100vh;
+    background-color: rgb(180, 180, 180);
+    font-family: 'Play', sans-serif;
+}
+
+#topAdminInfo {
+    height: 96vh;
+}
+
+#adminInfo {
+    padding-top: 5vh;
+}
+
+#tier2LeadInfo {
+    padding-top: 5vh;
+}
+
+#overlordName {
+    font-size: 80px;
+}
+
+#overlordPic {
+    border: black solid;
+    text-align: center;
+}
+
+.memberPic {
+    border: black solid;
+    text-align: center;
+}
+
+#rightNavButtonLeader {
+    position: absolute;
+    right: 5vw;
+}
+
+#leftNavButtonLeader {
+    position: absolute;
+    left: 5vw;
+}
+
+/* ================= RAID INFO ==================== */
+
+#raidInfo {
+    padding-top: 5vh;
+    /* color: white; */
+    text-align: center;
+    font-family: 'Play', sans-serif;
+    height: 100vh;
+}
+
+/* ================ Accomplishments ================= */
+
+#accomplishments {
+    padding-top: 5vh;
+    background-color: rgb(180, 180, 180);
+    text-align: center;
+    font-family: 'Play', sans-serif;
+    height: 100vh;
+}
+
+/* ========= FOOTER STYLE ================ */
+
+#footer {
+    background-color: black;
+    color: white;
+    height: 10vh;
+    text-align: center;
+}
