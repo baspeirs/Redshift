@@ -6,6 +6,16 @@ html {
     text-align: center;
 }
 
+.rightNavButton {
+    position: absolute;
+    right: 5vw;
+}
+
+.leftNavButton {
+    position: absolute;
+    left: 5vw;
+}
+
 /* ================= HERO STYLES ==================== */
 
 #hero {
@@ -35,6 +45,7 @@ html {
     font-size: 60px;
     font-family: 'Play', sans-serif;
     display: none;
+    text-shadow: 3px 0 0 rgb(255, 2, 2), -2px 0 0 rgb(255, 2, 2), 0 2px 0 rgb(220, 6, 248), 0 -3px 0 rgb(9, 240, 228), 1px 1px rgb(235, 0, 243), -1px -1px 0 rgb(245, 6, 6), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
 }
 
 #server {
@@ -43,20 +54,11 @@ html {
     font-size: 50px;
     font-family: 'Play', sans-serif;
     display: none;
+    text-shadow: 3px 0 0 rgb(255, 2, 2), -2px 0 0 rgb(255, 2, 2), 0 2px 0 rgb(220, 6, 248), 0 -3px 0 rgb(9, 240, 228), 1px 1px rgb(235, 0, 243), -1px -1px 0 rgb(245, 6, 6), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
 }
 
 #topHero {
     height: 94vh;
-}
-
-#rightNavButtonHero {
-    position: absolute;
-    right: 5vw;
-}
-
-#leftNavButtonHero {
-    position: absolute;
-    left: 5vw;
 }
 
 /* ================= ADMIN AND OTHER LEADER INFO ==================== */
@@ -65,6 +67,18 @@ html {
     height: 100vh;
     background-color: rgb(180, 180, 180);
     font-family: 'Play', sans-serif;
+}
+
+#leaderHeadshotHolder {
+    text-align: center;
+}
+
+#guildLeadHeadshot {
+    border-radius: 100%;
+    max-height: 30vh;
+    position: relative;
+    /* left: 5vw; */
+    /* margin: auto; */
 }
 
 #topAdminInfo {
@@ -77,10 +91,17 @@ html {
 
 #tier2LeadInfo {
     padding-top: 5vh;
+} 
+
+#guildLeaderHolder {
+    padding: 50px;
+    padding-left: 10px;
 }
 
 #overlordName {
     font-size: 80px;
+    margin-top: -25px;
+
 }
 
 #overlordPic {
@@ -113,6 +134,15 @@ html {
     height: 100vh;
 }
 
+#bonusRaidInfo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#topRaidInfo {
+    height: 87vh;
+}
+
 /* ================ Accomplishments ================= */
 
 #accomplishments {
@@ -121,6 +151,10 @@ html {
     text-align: center;
     font-family: 'Play', sans-serif;
     height: 100vh;
+}
+
+#topAccomp {
+    height: 87vh;
 }
 
 /* ========= FOOTER STYLE ================ */
