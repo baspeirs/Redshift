@@ -64,7 +64,9 @@ html {
 /* ================= ADMIN AND OTHER LEADER INFO ==================== */
 
 #leaderInfo {
-    height: 100vh;
+    height: 1250px;
+    /* min-height: 100vh; */
+    /* height: 100vh; */
     background-color: rgb(180, 180, 180);
     font-family: 'Play', sans-serif;
 }
@@ -144,7 +146,8 @@ html {
     /* color: white; */
     text-align: center;
     font-family: 'Play', sans-serif;
-    height: 100vh;
+    /* height: 100vh; */
+    min-height: 100vh;
 }
 
 #bonusRaidInfo {
@@ -153,7 +156,7 @@ html {
 }
 
 #topRaidInfo {
-    height: 87vh;
+    /* height: 87vh; */
 }
 
 /* ================ Accomplishments ================= */
@@ -163,7 +166,8 @@ html {
     background-color: rgb(180, 180, 180);
     text-align: center;
     font-family: 'Play', sans-serif;
-    height: 100vh;
+    /* height: 100vh; */
+    min-height: 100vh;
 }
 
 #topAccomp {
