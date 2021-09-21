@@ -75,8 +75,8 @@ html {
 /* ================= ADMIN AND OTHER LEADER INFO ==================== */
 
 #leaderInfo {
-    height: 1250px;
-    /* min-height: 100vh; */
+    /* height: 1250px; */
+    min-height: 100vh;
     /* height: 100vh; */
     background-color: rgb(180, 180, 180);
     font-family: 'Play', sans-serif;
@@ -109,7 +109,6 @@ html {
 #overlordName {
     font-size: 80px;
     margin-top: -25px;
-
 }
 
 #overlordPic {
@@ -217,6 +216,19 @@ html {
 /* ===== Mobile Responsive Media Querries ===== */
 
 @media only screen and (max-width: 600px) {
+
+    #leaderInfo {
+        text-align: center;
+    }
+
+    #guildLeaderHolder {
+        padding: 0px;
+    }
+
+    #overlordName {
+        font-size: 50px;
+    }
+
     #readHeader {
         font-size: 50px;
     }
@@ -227,5 +239,23 @@ html {
     
     #server {
         font-size: 25px;
+    }
+
+    .memberRow {
+        margin-bottom: 0px;
+    }
+
+    .footerButton {
+        text-align: center;
+    }
+
+    #CRBryceSpeirs {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #BryceWoWHolder {
+        margin-left: 0px;
+        margin-right: 0px;
     }
   }
