@@ -1,0 +1,38 @@
+{
+    "Arcane": {
+        "src": "./Icons/Arcane_mage.png",
+        "alt": "Arcane Mage Icon"
+    },
+    "Frost": {
+        "src": "./Icons/Frost_mage.png",
+        "alt": "Frost Mage Icon"
+    },
+    "Fire": {
+        "src": "./Icons/Fire_mage.png",
+        "alt": "Fire Mage Icon"
+    },
+    "Protection": {
+        "src": "./Icons/Prot_Warior.png",
+        "alt": "Prot Warior Icon"
+    },
+    "Arms": {
+        "src": "./Icons/Arms_Warior.png",
+        "alt": "Prot_Warior Icon"
+    },
+    "Fury": {
+        "src": "./Icons/Fury_Warior.png",
+        "alt": "Prot_Warior Icon"
+    },
+    "Assassination": {
+        "src": "./Icons/Assassination_Rogue",
+        "alt": "Assassination Rogue Icon"
+    },
+    "Subtlety": {
+        "src": "./Icons/Subtlety_Rogue.png",
+        "alt": "Subtlety Rogue Icon"
+    },
+    "Combat": {
+        "src": "",
+        "alt": "Combat Rogue Icon"
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "redshift",
+  "version": "1.0.0",
+  "description": "Promotional website for World of Warcraft Classic guild Redshift.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baspeirs/Redshift.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baspeirs/Redshift/issues"
+  },
+  "homepage": "https://github.com/baspeirs/Redshift#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "googleapis": "^89.0.0"
+  }
+}
