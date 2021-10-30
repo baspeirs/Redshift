@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.get("/", async (req, res) => {
-    res.sendFile('./Public/index.html', {root: __dirname })
+    res.render('./Public/index.html', {root: __dirname })
 });
 
 require("dotenv").config();
