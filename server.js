@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.get("/", async (req, res) => {
-    res.render('./Public/index.html', {root: __dirname })
+    res.sendFile(path.join(__dirname + "./Public/index.html"));
 });
 
 require("dotenv").config();
@@ -45,4 +45,4 @@ app.get("/api/roster", async (req, res) => {
     res.json(returnData);
 })
 
-app.listen(PORT, (req, res) => console.log("running on 8080"));
+app.listen(PORT, (req, res) => console.log(`Redshift-Guild is listening on PORT ${PORT}`));
