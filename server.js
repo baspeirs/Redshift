@@ -3,6 +3,7 @@ const {google} = require("googleapis");
 let returnData;
 // supported google apis
 const apis = google.getSupportedAPIs();
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -44,4 +45,4 @@ app.get("/api/roster", async (req, res) => {
     res.json(returnData);
 })
 
-app.listen(8080, (req, res) => console.log("running on 8080"));
+app.listen(PORT, (req, res) => console.log("running on 8080"));
