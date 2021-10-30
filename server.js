@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/Public"));
 
 app.get("/", async (req, res) => {
     res.sendFile(path.join(__dirname + "/Public/index.html"));
