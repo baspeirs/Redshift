@@ -1,6 +1,6 @@
 const express = require("express");
 const {google} = require("googleapis");
-const path = requre("path");
+const path = require("path");
 let returnData;
 // supported google apis
 const apis = google.getSupportedAPIs();
