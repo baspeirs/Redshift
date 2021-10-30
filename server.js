@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.get("/", async (req, res) => {
-    res.sendFile(path.join(__dirname + "./Public/index.html"));
+    res.sendFile(path.join(__dirname + "/Public/index.html"));
 });
 
 require("dotenv").config();
