@@ -35,24 +35,28 @@ getRoster().then(res => {
     renderGroup(group2, rosterDataTypes, "2")
 });
 renderGroup = (groupArray, headerArray, x) => {
-    groupArray.splice(0, 1)
 
-    let tableHeader = $("<tr>")
-    headerArray.forEach(item => {
-        let tableCell = $("<th>")
-        tableCell.text(item)
-        tableHeader.append(tableCell)
-    });
-    $(`#group${x}Data`).append(tableHeader);
+    // =========== Commented out section will be included if we want table headers
+    // groupArray.splice(0, 1)
+
+    // let tableHeader = $("<tr>")
+    // headerArray.forEach(item => {
+    //     let tableCell = $("<th>")
+    //     tableCell.text(item)
+    //     tableHeader.append(tableCell)
+    // });
+    // $(`#group${x}Data`).append(tableHeader);
 
     groupArray.forEach(character => {
         console.log(character)
-        let tableRow = $("<tr>");
+        let tableRow = $("<div>");
+        tableRow.attr("class", "tableRow row")
         for (let i = 0; i < character.length; i++) {
             // character[i];
-            let tableCell = $("<td>");
+            let tableCell = $("<div>");
             // origional column number is 2 - will change to 0 when style changes are ready for deployment
-            if (i === 2) {
+            if (i === 0) {
+                tableCell.attr("class", "cellData cellDataImg col-1")
                 let spec = specs[character[i]]
                 let icon = $("<img>");
 
@@ -62,9 +66,19 @@ renderGroup = (groupArray, headerArray, x) => {
 
                 icon.attr("src", spec.src);
                 icon.attr("alt", spec.alt);
+                icon.attr("class", "specIcon")
                 tableCell.append(icon);
             }
+            else if (character[i].toLowerCase() === "yes") {
+                tableCell.attr("class", "cellData cellDataTxt col-2");
+                tableCell.text(character[i]);
+            }
+            else if (character[i].toLowerCase() === "no") {
+                tableCell.attr("class", "cellData cellDataTxt col-2")
+                tableCell.text(character[i]);
+            }
             else {
+                tableCell.attr("class", "cellData cellDataTxt col-3")
                 tableCell.text(character[i]);
             }
             tableRow.append(tableCell);
