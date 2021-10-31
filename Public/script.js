@@ -51,9 +51,14 @@ renderGroup = (groupArray, headerArray, x) => {
         for (let i = 0; i < character.length; i++) {
             // character[i];
             let tableCell = $("<td>");
-            if (i === 2) {
+            if (i === 0) {
                 let spec = specs[character[i]]
                 let icon = $("<img>");
+
+                console.log(spec)
+                console.log(spec.src)
+                console.log(spec.alt)
+                
                 icon.attr("src", spec.src);
                 icon.attr("alt", spec.alt);
                 tableCell.append(icon);

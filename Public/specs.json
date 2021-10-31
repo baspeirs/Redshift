@@ -11,8 +11,8 @@
         "src": "./Icons/Fire_mage.png",
         "alt": "Fire Mage Icon"
     },
-    "Protection": {
-        "src": "./Icons/Prot_Warior.png",
+    "Protection(Warrior)": {
+        "src": "./Icons/Arms_Warior.png",
         "alt": "Prot Warior Icon"
     },
     "Arms": {
@@ -24,7 +24,7 @@
         "alt": "Prot_Warior Icon"
     },
     "Assassination": {
-        "src": "./Icons/Assassination_Rogue",
+        "src": "./Icons/Assassination_Rogue.png",
         "alt": "Assassination Rogue Icon"
     },
     "Subtlety": {
@@ -32,7 +32,79 @@
         "alt": "Subtlety Rogue Icon"
     },
     "Combat": {
-        "src": "",
+        "src": "./Icons/Combat_Rogue.png",
         "alt": "Combat Rogue Icon"
+    },
+    "Affliction": {
+        "src": "./Icons/Affliction_Warlock.png",
+        "alt": "Affliction Warlock Icon"
+    },
+    "Destruction": {
+        "src": "./Icons/Destruction_Warlock.png",
+        "alt": "Destruction Warlock Icon"
+    },
+    "Demonology": {
+        "src": "./Icons/Demonology_Warlock.png",
+        "alt": "Demonology Warlock Icon"
+    },
+    "Balance": {
+        "src": "./Icons/Balance_Druid.png",
+        "alt": "Balance Druid Icon"
+    },
+    "Feral": {
+        "src": "./Icons/Feral_Druid.png",
+        "alt": "Feral Druid Icon"
+    },
+    "Restoration(Druid)": {
+        "src": "./Icons/Restoration_Druid.png",
+        "alt": "Restoration Druid Icon"
+    },
+    "Beast Master": {
+        "src": "./Icons/BeastMaster_Hunter.png",
+        "alt": "Hunter Icon"
+    },
+    "Marksmanship": {
+        "src": "./Icons/Marksmanship_Hunter.png",
+        "alt": "Marksmanship Hunter Icon"
+    },
+    "Survival": {
+        "src": "./Icons/Survival_Hunter.png",
+        "alt": "Survival Hunter Icon"
+    },
+    "Discipline": {
+        "src": "./Icons/Discipline_Priest.png",
+        "alt": "Discipline Priest Icon"
+    },
+    "Holy(Priest)": {
+        "src": "./Icons/Holy_Priest.png",
+        "alt": "Holy Priest Icon"
+    },
+    "Shadow": {
+        "src": "./Icons/Shadow_Priest.png",
+        "alt": "Shadow Priest Icon"
+    },
+    "Elemental": {
+        "src": "./Icons/Elemental_Shaman.png",
+        "alt": "Elemental Shaman Icon"
+    },
+    "Enhancement": {
+        "src": "./Icons/Enhancement_Shaman.png",
+        "alt": "Enhancement Shaman Icon"
+    },
+    "Restoration(Shaman)": {
+        "src": "./Icons/Restoration_Shaman.png",
+        "alt": "Restoration Shaman Icon"
+    },
+    "Holy(Paladin)": {
+        "src": "./Icons/Holy_Paladin.png",
+        "alt": "Holy Paladin Icon"
+    },
+    "Protection(Paladin)": {
+        "src": "./Icons/Protection_Paladin.png",
+        "alt": "Protection Paladin Icon"
+    },
+    "Retribution": {
+        "src": "./Icons/Retribution_Paladin.png",
+        "alt": "Retribution Paladin Icon"
     }
 }
