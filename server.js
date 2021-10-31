@@ -36,12 +36,12 @@ app.get("/api/roster", async (req, res) => {
     const getGroup1 = await sheets.spreadsheets.values.get({
         // auth,
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: "Sheet3!A2:Z1000"
+        range: "Group1!A2:Z1000"
     });
     const getGroup2 = await sheets.spreadsheets.values.get({
         // auth,
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: "Sheet3!A2:Z1000"
+        range: "Group2!A2:Z1000"
     });
     // add all returned data into one object
     returnData = {
