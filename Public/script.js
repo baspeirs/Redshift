@@ -51,14 +51,15 @@ renderGroup = (groupArray, headerArray, x) => {
         for (let i = 0; i < character.length; i++) {
             // character[i];
             let tableCell = $("<td>");
-            if (i === 0) {
+            // origional column number is 2 - will change to 0 when style changes are ready for deployment
+            if (i === 2) {
                 let spec = specs[character[i]]
                 let icon = $("<img>");
 
                 console.log(spec)
                 console.log(spec.src)
                 console.log(spec.alt)
-                
+
                 icon.attr("src", spec.src);
                 icon.attr("alt", spec.alt);
                 tableCell.append(icon);
