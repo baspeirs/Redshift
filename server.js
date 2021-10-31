@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(__dirname + "/Public"));
+app.use(express.static(__dirname + "/Public/"));
 
 app.get("/", async (req, res) => {
     res.sendFile(path.join(__dirname + "/Public/index.html"));
@@ -18,22 +18,28 @@ app.get("/", async (req, res) => {
 require("dotenv").config();
 
 app.get("/api/roster", async (req, res) => {
-    const auth = new google.auth.GoogleAuth({
-        keyFile: "secrets.json",
-        scopes: "https://www.googleapis.com/auth/spreadsheets",
+    // const auth = new google.auth.GoogleAuth({
+    //     keyFile: "secrets.json",
+    //     scopes: "https://www.googleapis.com/auth/spreadsheets",
+    // });
+    // // create client instance for auth
+    // const client = await auth.getClient();
+    // // create instance of google sheets API
+    // const sheets = google.sheets({version: "v4", auth: client});
+
+    const sheets = google.sheets({
+        version: "v4",
+        auth: process.env.GOOGLE_ACCOUNT_API_KEY
     });
-    // create client instance for auth
-    const client = await auth.getClient();
-    // create instance of google sheets API
-    const sheets = google.sheets({version: "v4", auth: client});
+
     // read rows from spreadsheet
     const getGroup1 = await sheets.spreadsheets.values.get({
-        auth,
+        // auth,
         spreadsheetId: process.env.SPREADSHEET_ID,
         range: "Group1!A1:Z1000"
     });
     const getGroup2 = await sheets.spreadsheets.values.get({
-        auth,
+        // auth,
         spreadsheetId: process.env.SPREADSHEET_ID,
         range: "Group2!A1:Z1000"
     });
