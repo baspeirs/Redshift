@@ -18,14 +18,6 @@ app.get("/", async (req, res) => {
 require("dotenv").config();
 
 app.get("/api/roster", async (req, res) => {
-    // const auth = new google.auth.GoogleAuth({
-    //     keyFile: "secrets.json",
-    //     scopes: "https://www.googleapis.com/auth/spreadsheets",
-    // });
-    // // create client instance for auth
-    // const client = await auth.getClient();
-    // // create instance of google sheets API
-    // const sheets = google.sheets({version: "v4", auth: client});
 
     const sheets = google.sheets({
         version: "v4",

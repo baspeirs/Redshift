@@ -75,9 +75,8 @@ html {
 /* ================= ADMIN AND OTHER LEADER INFO ==================== */
 
 #leaderInfo {
-    /* height: 1250px; */
-    min-height: 100vh;
-    /* height: 100vh; */
+    height: auto;
+    /* min-height: 100vh; */
     background-color: rgb(180, 180, 180);
     font-family: 'Play', sans-serif;
     margin-top: 200px;
@@ -162,18 +161,68 @@ html {
 
 /* ================ Accomplishments ================= */
 
+.bossCard {
+    margin: 30px;
+    height: 100%;
+}
+
+/* Maybe */
+.bossCard:hover {
+    background-color: black;
+    color: white;
+}
+
+.bossCardImage {
+    background-image: url("./RaidBossImage/GruulMag.png");
+    height: 250px;
+    width: auto;
+    object-fit: cover;
+    /* object-fit: contain; */
+}
+
+.raidCompletionIndicator {
+    border: solid red 1px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    color: red;
+}
+
+.raidCompletionIndicator:hover {
+    background-color: red;
+    color: white;
+}
+
 #accomplishments {
     padding-top: 10vh;
+    padding-bottom: 10vh;
     background-color: rgb(180, 180, 180);
-    text-align: center;
     font-family: 'Play', sans-serif;
-    /* height: 100vh; */
+    height: 100%;
     min-height: 100vh;
 }
 
-#topAccomp {
-    height: 87vh;
+#accomplishmentsHeadder {
+    font-family: 'Play', sans-serif;
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 60px;
+    text-align: center;
 }
+
+#phase1Progress {
+    text-align: center;
+    font-size: 45px;
+    text-decoration: underline;
+}
+
+#phase1Progress:hover {
+    color: green;
+}
+
+/* .accompRow {
+    margin-bottom: 30px;
+} */
 
 /* ========= FOOTER STYLE ================ */
 
@@ -272,15 +321,15 @@ html {
         padding: 0px;
     }
 
-    #overlordName, #liveRosterHeader {
-        font-size: 50px;
+    #overlordName, #liveRosterHeader, #accomplishmentsHeadder {
+        font-size: 40px;
     }
 
     #readHeader {
         font-size: 50px;
     }
     
-    #gameTitle {
+    #gameTitle, #phase1Progress {
         font-size: 30px;
     }
     
@@ -315,6 +364,11 @@ html {
         width: 20px;
         margin-top: 10px;
         margin-left: 0px;
+    }
+
+    .accompMulgGruul {
+        /* margin-right: 120px; */
+        width: 50%;
     }
   }
 
