@@ -90,7 +90,7 @@
                         <img src="./RaidBossImage/WoW-Karazhan-Entrance-scaled2.jpg" alt="Image of Karazhan">
                         <div class="bossCardText card-body">
                             <h4>Karazhan</h4>
-                            <h5 class="raidCompletionIndicator">2/2</h5>
+                            <h5 class="raidCompletionIndicator">11/11</h5>
                             <p>"This raid is THICC"</p>
                             <p>"Idk.. Something about dragons?"</p>
                         </div>
@@ -104,20 +104,26 @@
 
     <div id="raidInfo">
         <div id="topRaidInfo" class="container">
-            <div class="row">
-                <div class="col-xl-6">
-                    <h2>Group 1</h2>
-                    <h3>Gruul || Mag || SSC || TK</h3>
-                    <h3>Tuesdays & Wednesdays</h3>
-                    <h4>8pm Server Time - 11pm Server Time</h4>
-                    <h4>Invites @ 7:30pm Server time</h4>
+            <h2 id="raidInfoHeader">Raid Info</h2>
+            <p><i>Server Time (ST) is the same as Eastern Standard Time</i></p>
+            <div class="raidCard">
+                <div class="cardContent">
+                    <h2 class="cardHeadder">Group 1</h2>
+                    <div class="cardText">
+                        <h3>Gruul || Mag || SSC || TK</h3>
+                        <h3>Tuesdays & Wednesdays 8pm ST - 11pm ST</h3>
+                        <h4>Invites @ 7:30pm ST</h4>
+                    </div>
                 </div>
-                <div class="col-xl-6">
-                    <h2>Group 2</h2>
-                    <h3>Gruul || Mag || SSC || TK</h3>
-                    <h3>Fridays & Saturdays</h3>
-                    <h4>10pm Server Time - 1am Server Time</h4>
-                    <h4>Invites @ 9:30pm Server time</h4>
+            </div>
+            <div class="raidCard">
+                <div class="cardContent">
+                    <h2 class="cardHeadder">Group 2</h2>
+                    <div class="cardText">
+                        <h3>Gruul || Mag || SSC || TK</h3>
+                        <h3>Fridays & Saturdays 10pm ST - 01am ST</h3>
+                        <h4>Invites @ 9:30pm ST</h4>
+                    </div>
                 </div>
             </div>
 
@@ -125,7 +131,6 @@
                 <div class="col-12">
                     <h4>Groups may organize for Kara and Classic Raid content</h4>
                     <h4>Utilize discord chats for non-weekly raids, guild request, and general fuckery</h4>
-                    <h4>Server Time is the same as Eastern Standard time</h4>
                 </div>
             </div>
         </div>
@@ -135,48 +140,59 @@
 
     <div id="leaderInfo">
         <div class="container">
-            <div id="topAdminInfo">
                 <div class="row" id="adminInfo">
-                    <div id="leaderHeadshotHolder" class="col-xl-4">
+                    <div id="leaderHeadshotHolder" class="col-xl-5">
                         <img id="guildLeadHeadshot" src="./WillfeignHeadshot.png"
                             alt="Headshot of Willfeign the Guild Leader">
                     </div>
-                    <div id="guildLeaderHolder" class="col-xl-8">
+                    <div id="guildLeaderHolder" class="col-xl-7">
                         <h3>Your Overlord:</h3>
                         <h2 id="overlordName">Willfeign</h2>
                         <p class="memberQuote">"Go on get!"</p>
                     </div>
                 </div>
 
-                <div class="row memberRow" id="tier2LeadInfo">
-                    <div class="col-xl-2">
-                        <h2 class="memberPic" id="raidLeadPic">Some sort of picture</h2>
-                    </div>
-                    <div class="col-xl-4">
-                        <h2 id="raidLeadName">Dmontri</h2>
-                        <h4>Raid Lead</h4>
-                        <p class="memberQuote">"That'll be another citation"</p>
-                    </div>
-                </div>
-                <div class="row memberRow" id="tier2LeadInfo">
-                    <div class="col-xl-6"></div>
-                    <div class="col-xl-4">
-                        <h2 id="raidLeadName">Kaoson</h2>
-                        <h4>Guild Bank</h4>
-                        <p class="memberQuote">"Ask me about my car's extended warranty"</p>
-                    </div>
-                    <div class="col-xl-2">
-                        <h2 class="memberPic" id="raidLeadPic">Some sort of picture</h2>
+                <div class="row memberRow">
+                    <div class="col-xl-6">
+                        <div class="row">
+                            <div class="leftImgHolder col-xl-6">
+                                <div class="imageHolder leftImage">
+                                    <img class="memberPic" id="coolGuyPic" src="" alt="Image of Dmontri's WoW character">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <h2 id="coolGuyName">Dmontri</h2>
+                                <h3>Raid Lead</h3>
+                                <p class="memberQuote">"That'll be another citation"</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="row memberRow" id="tier3Member">
-                     
+                <div class="row memberRow">
+                    <div class="col-xl-6"></div>
                     <div class="col-xl-6">
                         <div class="row">
-                            <div id="coolGuyPicHolder" class="col-xl-6">
-                                <div>
-                                    <img class="memberPic" id="coolGuyPic" src="./JointboiNormal1.png" alt="Image of Bryce's WoW character">
+                            <div class="memberRightAlign col-xl-6">
+                                <h2>Kaoson</h2>
+                                <h4>Guild Bank</h4>
+                                <p class="memberQuote">"Ask me about my car's extended warranty"</p>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="imageHolder">
+                                    <img class="memberPic" src="./AdminPictures/Kaoson.png" alt="Image of Kaoson's WoW character">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row memberRow">
+                    <div class="col-xl-6">
+                        <div class="row">
+                            <div class="leftImgHolder col-xl-6">
+                                <div class="leftImage">
+                                    <img class="memberPic" id="coolGuyPic" src="./JointboiNormal1.png" alt="Image of Jointboi's WoW character">
                                 </div>
                             </div>
                             <div class="col-xl-6">
@@ -186,8 +202,6 @@
                         </div>
                     </div>
                 </div>
-
-            </div>
         </div>
     </div>
 
@@ -200,9 +214,6 @@
                 <div id="group1Data" class="rosterGroup col-xl-6">
                     <h3 class="tableHeader">Group 1</h3>
                 </div>
-                <!-- <table></table> -->
-                <!-- <div id="tableSpacer" class="col-xl-1"></div> -->
-                <!-- <table></table> -->
                 <div id="group2Data" class="rosterGroup col-xl-6">
                     <h3 class="tableHeader">Group 2</h3>
                 </div>
