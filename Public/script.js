@@ -1,5 +1,7 @@
 let group1;
 let group2;
+let raidDetails1;
+let raidDetails2;
 let rosterDataTypes;
 let specs;
 
@@ -27,13 +29,20 @@ fetch("./specs.json")
     .then(data => specs = data)
 
 getRoster().then(res => {
+    console.log(res)
     rosterDataTypes = res.group1.values[0]
     group1 = res.group1.values
     group2 = res.group2.values
+    raidDetails1 = res.raidDetails1.values
+    raidDetails2 = res.raidDetails2.values
     // either seems to work, leaving both to see if one ever fails
     renderGroup(group1, rosterDataTypes, 1);
-    renderGroup(group2, rosterDataTypes, "2")
+    renderGroup(group2, rosterDataTypes, "2");
+    renderRaidDetails(raidDetails1[0], 1);
+    renderRaidDetails(raidDetails2[0], 2);
 });
+
+// call render group with raid group details, headers for the tables, and an integer for the raid group number
 renderGroup = (groupArray, headerArray, x) => {
 
     // =========== Commented out section will be included if we want table headers
@@ -60,22 +69,10 @@ renderGroup = (groupArray, headerArray, x) => {
                 let spec = specs[character[i]]
                 let icon = $("<img>");
 
-                console.log(spec)
-                console.log(spec.src)
-                console.log(spec.alt)
-
                 icon.attr("src", spec.src);
                 icon.attr("alt", spec.alt);
                 icon.attr("class", "specIcon")
                 tableCell.append(icon);
-            }
-            else if (character[i].toLowerCase() === "yes") {
-                tableCell.attr("class", "cellData cellDataTxt col-2");
-                tableCell.text(character[i]);
-            }
-            else if (character[i].toLowerCase() === "no") {
-                tableCell.attr("class", "cellData cellDataTxt col-2")
-                tableCell.text(character[i]);
             }
             else {
                 tableCell.attr("class", "cellData cellDataTxt col-3")
@@ -86,3 +83,37 @@ renderGroup = (groupArray, headerArray, x) => {
         $(`#group${x}Data`).append(tableRow);
     });
 };
+
+// call raid details function with an array of data and an integer for group number
+renderRaidDetails = (raidDetails, x) => {
+    console.log(raidDetails);
+    console.log(x);
+    console.log(raidDetails[0]);
+    console.log(raidDetails[1]);
+    console.log(raidDetails[2]);
+    console.log(raidDetails[3]);
+    console.log(raidDetails[4]);
+    // a div for the raidCard class
+    let raidCard = $("<div>");
+    raidCard.attr("class", "raidCard");
+    // a div for the cardContent calss
+    let cardContent = $("<div>");
+    cardContent.attr("class", "cardContent");
+    // a div for the cardHeadder class
+    let cardHeadder = $("<h2>");
+    cardHeadder.attr("class", "cardHeadder");
+    cardHeadder.text(`Group ${x}`)
+    // a div for the cardText class
+    let cardText = $("<div>");
+    cardText.attr("class", "cardText");
+
+    const raidBosses = $("<h3>").text("Gruul || Mag || SSC || TK");
+    const dayString = $("<h3>").text(`${raidDetails[0]} & ${raidDetails[1]} ${raidDetails[2]} ST - ${raidDetails[3]} ST`);
+    const invitesString = $("<h4>").text(`Invites @ ${raidDetails[4]} ST`);
+
+    cardText.append(raidBosses, dayString, invitesString)
+    cardContent.append(cardHeadder, cardText);
+    raidCard.append(cardContent);
+
+    $("#topRaidInfo").append(raidCard)
+}
