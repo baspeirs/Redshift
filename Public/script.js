@@ -24,6 +24,7 @@ const getRoster = () => {
     });
 };
 
+//get the icons from json file
 fetch("./specs.json")
     .then(res => res.json())
     .then(data => specs = data)
@@ -32,14 +33,14 @@ getRoster().then(res => {
     console.log(res)
     rosterDataTypes = res.group1.values[0]
     group1 = res.group1.values
-    group2 = res.group2.values
+    bench = res.bench.values
     raidDetails1 = res.raidDetails1.values
-    raidDetails2 = res.raidDetails2.values
+    // raidDetails2 = res.raidDetails2.values
     // either seems to work, leaving both to see if one ever fails
     renderGroup(group1, rosterDataTypes, 1);
-    renderGroup(group2, rosterDataTypes, "2");
+    renderGroup(bench, rosterDataTypes, "2");
     renderRaidDetails(raidDetails1[0], 1);
-    renderRaidDetails(raidDetails2[0], 2);
+    // renderRaidDetails(raidDetails2[0], 2);
 });
 
 // call render group with raid group details, headers for the tables, and an integer for the raid group number
@@ -57,7 +58,6 @@ renderGroup = (groupArray, headerArray, x) => {
     // $(`#group${x}Data`).append(tableHeader);
 
     groupArray.forEach(character => {
-        console.log(character)
         let tableRow = $("<div>");
         tableRow.attr("class", "tableRow row")
         for (let i = 0; i < character.length; i++) {

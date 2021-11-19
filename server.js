@@ -37,24 +37,33 @@ app.get("/api/roster", async (req, res) => {
         range: "Group1!G2:K2"
     });
 
-    const getGroup2 = await sheets.spreadsheets.values.get({
+    const getBench = await sheets.spreadsheets.values.get({
         // auth,
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: "Group2!A2:D50"
+        range: "Bench!A2:D50"
     });
+    
+    // reserved for activation of second raid group
 
-    const getRaidDetails2 = await sheets.spreadsheets.values.get({
-        // auth,
-        spreadsheetId: process.env.SPREADSHEET_ID,
-        range: "Group2!G2:K2"
-    });
+    // const getGroup2 = await sheets.spreadsheets.values.get({
+    //     // auth,
+    //     spreadsheetId: process.env.SPREADSHEET_ID,
+    //     range: "Group2!A2:D50"
+    // });
+
+    // const getRaidDetails2 = await sheets.spreadsheets.values.get({
+    //     // auth,
+    //     spreadsheetId: process.env.SPREADSHEET_ID,
+    //     range: "Group2!G2:K2"
+    // });
 
     // add all returned data into one object
     returnData = {
         group1: getGroup1.data,
-        group2: getGroup2.data,
+        // group2: getGroup2.data,
         raidDetails1: getRaidDetails1.data,
-        raidDetails2: getRaidDetails2.data
+        // raidDetails2: getRaidDetails2.data,
+        bench: getBench.data
     };
 
     res.json(returnData);
