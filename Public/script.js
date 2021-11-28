@@ -30,33 +30,21 @@ fetch("./specs.json")
     .then(data => specs = data)
 
 getRoster().then(res => {
-    console.log(res)
     rosterDataTypes = res.group1.values[0]
     group1 = res.group1.values
     bench = res.bench.values
     raidDetails1 = res.raidDetails1.values
     // raidDetails2 = res.raidDetails2.values
-    // either seems to work, leaving both to see if one ever fails
-    renderGroup(group1, rosterDataTypes, 1);
-    renderGroup(bench, rosterDataTypes, "2");
+    renderGroup(group1, 1);
+    renderGroup(bench, "Bench");
     renderRaidDetails(raidDetails1[0], 1);
     // renderRaidDetails(raidDetails2[0], 2);
 });
 
-// call render group with raid group details, headers for the tables, and an integer for the raid group number
-renderGroup = (groupArray, headerArray, x) => {
-
-    // =========== Commented out section will be included if we want table headers
-    // groupArray.splice(0, 1)
-
-    // let tableHeader = $("<tr>")
-    // headerArray.forEach(item => {
-    //     let tableCell = $("<th>")
-    //     tableCell.text(item)
-    //     tableHeader.append(tableCell)
-    // });
-    // $(`#group${x}Data`).append(tableHeader);
-
+// call render group with raid group details and Group Name for the raid group number
+renderGroup = (groupArray, groupName) => {
+    console.log(groupArray);
+    console.log(groupName);
     groupArray.forEach(character => {
         let tableRow = $("<div>");
         tableRow.attr("class", "tableRow row")
@@ -80,19 +68,12 @@ renderGroup = (groupArray, headerArray, x) => {
             }
             tableRow.append(tableCell);
         };
-        $(`#group${x}Data`).append(tableRow);
+        $(`#group${groupName}Data`).append(tableRow);
     });
 };
 
-// call raid details function with an array of data and an integer for group number
-renderRaidDetails = (raidDetails, x) => {
-    console.log(raidDetails);
-    console.log(x);
-    console.log(raidDetails[0]);
-    console.log(raidDetails[1]);
-    console.log(raidDetails[2]);
-    console.log(raidDetails[3]);
-    console.log(raidDetails[4]);
+// call raid details function with an array of data and the group name
+renderRaidDetails = (raidDetails, groupName) => {
     // a div for the raidCard class
     let raidCard = $("<div>");
     raidCard.attr("class", "raidCard");
@@ -102,7 +83,7 @@ renderRaidDetails = (raidDetails, x) => {
     // a div for the cardHeadder class
     let cardHeadder = $("<h2>");
     cardHeadder.attr("class", "cardHeadder");
-    cardHeadder.text(`Group ${x}`)
+    cardHeadder.text(`Group ${groupName}`)
     // a div for the cardText class
     let cardText = $("<div>");
     cardText.attr("class", "cardText");

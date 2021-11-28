@@ -196,18 +196,11 @@ html {
     height: 100%;
 }
 
-/* Maybe */
-/* .bossCard:hover {
-    background-color: black;
-    color: white;
-} */
-
 .bossCardImage {
     background-image: url("./RaidBossImage/GruulMag.png");
     height: 250px;
     width: auto;
     object-fit: cover;
-    /* object-fit: contain; */
 }
 
 .raidCompletionIndicator {
@@ -218,10 +211,9 @@ html {
     color: red;
 }
 
-/* .raidCompletionIndicator:hover {
-    background-color: red;
-    color: white;
-} */
+.bossCardHeadder {
+    text-align: center;
+}
 
 #accomplishments {
     padding-top: 10vh;
