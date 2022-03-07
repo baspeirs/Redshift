@@ -2,6 +2,12 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-image: url("./nasa-jlV2k_Fx0fc-unsplash4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .navButton {
     text-align: center;
 }
@@ -27,10 +33,20 @@ html {
     width: 100%;
     z-index: 1;
 }
+
 /* ================= HERO STYLES ==================== */
 
 #hero {
     height: 100vh;
+}
+
+.background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgb(0, 0, 0));
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
 }
 
 #heroImg {
@@ -76,9 +92,10 @@ html {
 
 #leaderInfo {
     height: auto;
-    background-color: rgb(180, 180, 180);
+    /* background-color: rgb(180, 180, 180); */
     font-family: 'Play', sans-serif;
     padding-top: 30px;
+    color: white;
 }
 
 #leaderHeadshotHolder {
@@ -96,10 +113,6 @@ html {
     margin-bottom: 30px;
 }
 
-#tier2LeadInfo {
-    padding-top: 5vh;
-} 
-
 #guildLeaderHolder {
     padding: 50px;
     padding-left: 10px;
@@ -115,15 +128,45 @@ html {
     text-align: center;
 }
 
-.memberPic {
-    border: black solid;
-    text-align: center;
-    max-width: 250px;
-    border-radius: 100%;
-}
-
 .memberRow {
     margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.memberCard {
+    background-color: rgba(255, 255, 255, 0.746);
+    display: grid;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px;
+}
+
+.memberCardText {
+    color: black;
+    margin: 10px;
+    margin-bottom: none !important;
+}
+
+.memberCardHeader {
+    font-size: 50px;
+}
+
+.memberCardSubHeader {
+    font-size: 30px;
+}
+
+.alignRight {
+    grid-template-columns: 3fr 2fr;
+}
+
+.alignLeft {
+    grid-template-columns: 2fr 3fr;
+}
+
+.memberPic {
+    max-width: 100%;
+    min-height: 100%;
 }
 
 .memberQuote {
@@ -134,17 +177,6 @@ html {
     text-align: right;
 }
 
-.leftImage {
-    text-align: right;
-}
-
-.imageHolder {
-    margin-bottom: -30px;
-}
-
-#coolGuyPic {
-    margin-bottom: 30px;
-}
 
 /* ================= RAID INFO ==================== */
 
@@ -153,6 +185,7 @@ html {
     text-align: center;
     font-family: 'Play', sans-serif;
     min-height: 100vh;
+    color: white;
 }
 
 #raidInfoHeader {
@@ -191,34 +224,62 @@ html {
 
 /* ================ Accomplishments ================= */
 
-.bossCard {
-    margin: 30px;
-    height: 100%;
+.bossRow {
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+    margin: 15px;
+    justify-items: center;
+    margin-bottom: 60px;
 }
 
-.bossCardImage {
-    background-image: url("./RaidBossImage/GruulMag.png");
-    height: 250px;
-    width: auto;
-    object-fit: cover;
+.bossRow#phase1 {
+    grid-template-columns: auto auto auto;
+}
+
+.bossRow#phase2 {
+    grid-template-columns: auto auto;
+}
+
+.bossCard {
+    max-width: 300px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.746);
+    overflow: hidden;
+}
+
+.raidBossImage {
+    max-width: 100%;
+}
+
+.bossCardText {
+    font-family: 'Carter One', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .raidCompletionIndicator {
     border: solid red 1px;
     border-radius: 5px;
-    width: 100%;
     text-align: center;
     color: red;
+    width: fit-content;
+    /* padding: 3px; */
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .bossCardHeadder {
+    /* display: flex; */
     text-align: center;
+    font-size: 35px;
+    /* align-self: flex-end; */
 }
 
 #accomplishments {
     padding-top: 10vh;
     padding-bottom: 10vh;
-    background-color: rgb(180, 180, 180);
+    /* background-color: rgb(180, 180, 180); */
     font-family: 'Play', sans-serif;
     height: 100%;
     min-height: 100vh;
@@ -230,16 +291,15 @@ html {
     text-align: center;
     margin-bottom: 60px;
     text-align: center;
+    color: white;
 }
 
-#phase1Progress {
+.phaseProgress {
     text-align: center;
     font-size: 45px;
     text-decoration: underline;
-}
-
-#phase1Progress:hover {
-    color: green;
+    color: white;
+    margin-bottom: 30px;
 }
 
 /* ========= FOOTER STYLE ================ */
@@ -285,6 +345,8 @@ html {
     font-family: 'Play', sans-serif;
     font-size: 80px;
     text-align: center;
+    color: white;
+    margin-top: 60px;
 }
 
 .tableHeader {

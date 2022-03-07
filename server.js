@@ -67,6 +67,6 @@ app.get("/api/roster", async (req, res) => {
     };
 
     res.json(returnData);
-})
+});
 
 app.listen(PORT, (req, res) => console.log(`Redshift-Guild is listening on PORT ${PORT}`));

@@ -13,39 +13,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-       <!-- ============== navbar ================-->
-       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- ============== navbar ================-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Redshift</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#accomplishments">Accomplishments</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#raidInfo">Raid Info</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#leaderInfo">Your Overlord</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#liveRoster">Live Roster</a>
-              </li>
-            </ul>
-          </div>
+            <a class="navbar-brand" href="#">Redshift</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accomplishments">Accomplishments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#raidInfo">Raid Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#leaderInfo">Your Overlord</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#liveRoster">Live Roster</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
 
     <!-- ============= Hero ============= -->
-    <div id="hero">
-        <img id="heroImg" src="./RedShiftBackground.jpg">
+    <section id="hero">
+        <img id="heroImg" src="./redShiftImage.jpg">
+        <div class="background"></div>
         <div class="container">
             <div class="row" id="topHero">
                 <div class="col-12">
@@ -55,53 +59,74 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- ========= Accomplishments =============== -->
+    <section>
 
-    <section id="accomplishments">
-        <div class="container">
-            <h2 id="accomplishmentsHeadder">Accomplishments</h2>
-            <h3 id="phase1Progress">TBC Phase 1 content: Complete</h3>
-            <div class="accompRow row">
-                <div class="col-xl-4">
-                    <div class="bossCard card">
-                        <img src="./RaidBossImage/Magtheridon2.jpg" alt="Image of Magtheridon">
-                        <div class="bossCardText card-body">
+        <!-- <img id="texturedBackground" src="./photo-1618123069754-cd64c230a169.jfif"> -->
+
+        <!-- ========= Accomplishments =============== -->
+
+        <section id="accomplishments">
+            <div class="container">
+                <h2 id="accomplishmentsHeadder">Accomplishments</h2>
+
+                <h3 class="phaseProgress">TBC Phase 1 content: Complete</h3>
+                <article id="phase1" class="bossRow">
+                    <div class="bossCard">
+                        <img class="raidBossImage" src="./RaidBossImage/TBC-Magtheridons-Lair-Magtheridon.jpg"
+                            alt="Image of Magtheridon">
+                        <div class="bossCardText">
                             <h4 class="bossCardHeadder">Magtheridon</h4>
                             <h5 class="raidCompletionIndicator">1/1</h5>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4">
-                    <div class="bossCard card">
-                        <img src="./RaidBossImage/GruulMaulgar.jpg" alt="Image of Gruul and Maulgar">
-                        <div class="bossCardText card-body">
-                            <h4 class="bossCardHeadder">Gruul and Maulgar</h4>
+                    <div class="bossCard">
+                        <img class="raidBossImage" src="./RaidBossImage/WoW-GruulsLair.jpg" alt="Image of Gruul">
+                        <div class="bossCardText">
+                            <h4 class="bossCardHeadder">Gruul's Lair</h4>
                             <h5 class="raidCompletionIndicator">2/2</h5>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4">
-                    <div class="bossCard card">
-                        <img src="./RaidBossImage/WoW-Karazhan-Entrance-scaled2.jpg" alt="Image of Karazhan">
-                        <div class="bossCardText card-body">
+                    <div class="bossCard">
+                        <img class="raidBossImage" src="./RaidBossImage/WoW-Karazhan-Entrance-scaled2.jpg"
+                            alt="Image of Karazhan">
+                        <div class="bossCardText">
                             <h4 class="bossCardHeadder">Karazhan</h4>
                             <h5 class="raidCompletionIndicator">11/11</h5>
                         </div>
                     </div>
-                </div>
+                </article>
+
+
+                <h3 class="phaseProgress">TBC Phase 2 content: Complete</h3>
+                <article id="phase2" class="bossRow">
+                    <div class="bossCard">
+                        <img class="raidBossImage" src="./RaidBossImage/WoW-SSC-LadyVoshj.png"
+                            alt="Image of Lady Voshj">
+                        <div class="bossCardText">
+                            <h4 class="bossCardHeadder">Serpentshrine Cavern</h4>
+                            <h5 class="raidCompletionIndicator">6/6</h5>
+                        </div>
+                    </div>
+                    <div class="bossCard">
+                        <img class="raidBossImage" src="./RaidBossImage/WoW-TK-Bosses.png" alt="Image of Tempest Keep Bosses">
+                        <div class="bossCardText">
+                            <h4 class="bossCardHeadder">Tempest Keep</h4>
+                            <h5 class="raidCompletionIndicator">4/4</h5>
+                        </div>
+                    </div>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========= Raid Info =============== -->
+        <!-- ========= Raid Info =============== -->
 
-    <div id="raidInfo">
-        <div id="topRaidInfo" class="container">
-            <h2 id="raidInfoHeader">Raid Info</h2>
-            <p><i>Server Time (ST) is the same as Eastern Standard Time</i></p>
-            <!-- <div class="raidCard">
+        <div id="raidInfo">
+            <div id="topRaidInfo" class="container">
+                <h2 id="raidInfoHeader">Raid Info</h2>
+                <p><i>Server Time (ST) is the same as Eastern Standard Time</i></p>
+                <!-- <div class="raidCard">
                 <div class="cardContent">
                     <h2 class="cardHeadder">Group 1</h2>
                     <div class="cardText">
@@ -121,20 +146,20 @@
                     </div>
                 </div>
             </div> -->
-        </div>
-        <div id="bonusRaidInfo" class="row">
-            <div class="col-12">
-                <h4>Groups may organize for Kara and Classic Raid content</h4>
-                <h4>Utilize discord chats for non-weekly raids, guild request, and general fuckery</h4>
+            </div>
+            <div id="bonusRaidInfo" class="row">
+                <div class="col-12">
+                    <h4>Groups may also organize for Kara and Classic Raid content (Just for fun)</h4>
+                    <h4>Utilize discord chats for non-weekly raids, guild request, and general nonsense</h4>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- ========= Leader/Officer Info =============== -->
+        <!-- ========= Leader/Officer Info =============== -->
 
-    <div id="leaderInfo">
-        <div class="container">
-                <div class="row" id="adminInfo">
+        <section id="leaderInfo">
+            <div class="container">
+                <article class="row" id="adminInfo">
                     <div id="leaderHeadshotHolder" class="col-xl-5">
                         <img id="guildLeadHeadshot" src="./WillfeignHeadshot.png"
                             alt="Headshot of Willfeign the Guild Leader">
@@ -144,76 +169,64 @@
                         <h2 id="overlordName">Willfeign</h2>
                         <p class="memberQuote">"Go on get!"</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="row memberRow">
-                    <div class="col-xl-6">
-                        <div class="row">
-                            <div class="leftImgHolder col-xl-6">
-                                <div class="imageHolder leftImage">
-                                    <img class="memberPic" src="./AdminPictures/Dmontri.png" alt="Image of Dmontri's WoW character">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <h2 id="coolGuyName">Dmontri</h2>
-                                <h3>Raid Lead</h3>
-                                <p class="memberQuote">"That'll be another citation"</p>
-                            </div>
+                <article class="memberRow">
+                    <div class="memberCard alignLeft">
+                        <div class="leftImgHolder">
+                                <img class="memberPic" src="./AdminPictures/Dmontri.png"
+                                    alt="Image of Dmontri's WoW character">
+                        </div>
+                        <div class="memberCardText">
+                            <h2 class="memberCardHeader">Dmontri</h2>
+                            <h3 class="memberCardSubHeader">Raid Lead</h3>
+                            <p class="memberQuote">"That'll be another citation"</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="row memberRow">
-                    <div class="col-xl-6"></div>
-                    <div class="col-xl-6">
-                        <div class="row">
-                            <div class="memberRightAlign col-xl-6">
-                                <h2>Kaosyn</h2>
-                                <h4>Guild Bank</h4>
-                                <p class="memberQuote">"Ask me about my car's extended warranty"</p>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="imageHolder">
-                                    <img class="memberPic" src="./AdminPictures/Kaoson.png" alt="Image of Kaoson's WoW character">
-                                </div>
-                            </div>
+                    <div class="memberCard alignRight">
+                        <div class="memberRightAlign memberCardText">
+                            <h2 class="memberCardHeader">Kaosyn</h2>
+                            <h4 class="memberCardSubHeader">Guild Bank</h4>
+                            <p class="memberQuote">"Ask me about my car's extended warranty"</p>
+                        </div>
+                        <div>
+                                <img class="memberPic" src="./AdminPictures/Kaoson.png"
+                                    alt="Image of Kaoson's WoW character">
+                            
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="row memberRow">
-                    <div class="col-xl-6">
-                        <div class="row">
-                            <div class="leftImgHolder col-xl-6">
-                                <div class="leftImage">
-                                    <img class="memberPic" id="coolGuyPic" src="./JointboiNormal1.png" alt="Image of Jointboi's WoW character">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <h2 id="coolGuyName">Jointboi</h2>
-                                <p class="memberQuote">"Coolest guy in the guild. No freakin contest" -Willfeign</p>
-                            </div>
+                <article class="memberRow">
+                    <div class="memberCard alignLeft">
+                                <img class="memberPic" src="./JointboiNormal1.png"
+                                    alt="Image of Jointboi's WoW character">
+                        <div class="memberCardText">
+                            <h2 class="memberCardHeader">Jointboi</h2>
+                            <p class="memberQuote">"Coolest guy in the guild. No freakin contest" -Willfeign</p>
                         </div>
                     </div>
-                </div>
-        </div>
-    </div>
+                </article>
+            </div>
+        </section>
 
-    <!-- ========= Live Roster ========== -->
+        <!-- ========= Live Roster ========== -->
 
-    <div id="liveRoster">
-        <div class="container">
-            <h2 id="liveRosterHeader">Live Roster</h2>
-            <div class="row">
-                <div id="group1Data" class="rosterGroup col-xl-6">
-                    <h3 class="tableHeader">Group 1</h3>
-                </div>
-                <div id="groupBenchData" class="rosterGroup col-xl-6">
-                    <h3 class="tableHeader">Bench</h3>
+        <div id="liveRoster">
+            <div class="container">
+                <h2 id="liveRosterHeader">Live Roster</h2>
+                <div class="row">
+                    <div id="group1Data" class="rosterGroup col-xl-6">
+                        <h3 class="tableHeader">Group 1</h3>
+                    </div>
+                    <div id="groupBenchData" class="rosterGroup col-xl-6">
+                        <h3 class="tableHeader">Bench</h3>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+    </section>
 
     <!-- ========= Footer =============== -->
 
@@ -262,7 +275,9 @@
     </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
     <script src="./script.js"></script>
 </body>
 
