@@ -43,34 +43,54 @@ getRoster().then(res => {
 
 // call render group with raid group details and Group Name for the raid group number
 renderGroup = (groupArray, groupName) => {
-    console.log(groupArray);
-    console.log(groupName);
-    groupArray.forEach(character => {
-        let tableRow = $("<div>");
-        tableRow.attr("class", "tableRow row")
-        for (let i = 0; i < character.length; i++) {
-            // character[i];
-            let tableCell = $("<div>");
-            // origional column number is 2 - will change to 0 when style changes are ready for deployment
-            if (i === 0) {
-                tableCell.attr("class", "cellData cellDataImg col-1")
-                let spec = specs[character[i]]
-                let icon = $("<img>");
-
-                icon.attr("src", spec.src);
-                icon.attr("alt", spec.alt);
-                icon.attr("class", "specIcon")
-                tableCell.append(icon);
+    console.log(groupArray)
+    if (groupArray != null) {
+        groupArray.forEach(character => {
+            let tableRow = $("<div>");
+            
+            if (character.length === 0) {
+                tableRow.attr("class", "tableRowAvailability cellDataText col-xl-5")
+                console.log("empty slot")
+                let tableCell = $("<div>");
+                tableCell.attr("class", "cellData")
+                let available = $("<p>")
+                available.text("Open Slot")
+                tableCell.append(available);
+                tableRow.append(tableCell);
             }
             else {
-                tableCell.attr("class", "cellData cellDataTxt col-3")
-                tableCell.text(character[i]);
+                tableRow.attr("class", "tableRow col-xl-5")
+                for (let i = 0; i < character.length; i++) {
+                    // character[i];
+                    let tableCell = $("<div>");
+                    // origional column number is 2 - will change to 0 when style changes are ready for deployment
+                    if (i === 0) {
+                        tableCell.attr("class", "cellData cellDataImg")
+                        let spec = specs[character[i]]
+                        let icon = $("<img>");
+    
+                        icon.attr("src", spec.src);
+                        icon.attr("alt", spec.alt);
+                        icon.attr("class", "specIcon")
+                        tableCell.append(icon);
+                    }
+                    else {
+                        tableCell.attr("class", "cellData cellDataTxt")
+                        tableCell.text(character[i]);
+                    }
+                    tableRow.append(tableCell);
+                };
             }
-            tableRow.append(tableCell);
-        };
-        $(`#group${groupName}Data`).append(tableRow);
-    });
+            $(`#group${groupName}Roster`).append(tableRow);
+        });
+    }
+
 };
+
+
+
+
+
 
 // call raid details function with an array of data and the group name
 renderRaidDetails = (raidDetails, groupName) => {

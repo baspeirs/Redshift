@@ -28,7 +28,7 @@ app.get("/api/roster", async (req, res) => {
     const getGroup1 = await sheets.spreadsheets.values.get({
         // auth,
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: "Group1!A2:D50"
+        range: "Group1!A2:B50"
     });
 
     const getRaidDetails1 = await sheets.spreadsheets.values.get({
@@ -40,7 +40,7 @@ app.get("/api/roster", async (req, res) => {
     const getBench = await sheets.spreadsheets.values.get({
         // auth,
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: "Bench!A2:D50"
+        range: "Bench!A2:B50"
     });
     
     // reserved for activation of second raid group
